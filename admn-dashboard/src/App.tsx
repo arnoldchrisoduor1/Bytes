@@ -1,9 +1,13 @@
+import DashboardWrapper from "./DashboardWrapper"
+import Dashboard from "./pages/Dashboard"
 
 function App() {
 
   return (
     <>
-      <h1 className='p-11'>Hellow Vite</h1>
+      <DashboardWrapper>
+          <Dashboard />
+      </DashboardWrapper>
     </>
   )
 }
