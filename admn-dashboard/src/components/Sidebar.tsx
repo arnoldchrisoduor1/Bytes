@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 
 const Sidebar = () => {
   return (
-    <div className="bg-gradient-to-b from-sidebarTop to-sidebarBottom h-screen p-2">
+    <div className="bg-gradient-to-b from-sidebarTop to-sidebarBottom h-screen p-1">
       <div className="px-1 w-[200px] mt-6">
 
           {/*  logo */}

@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         sidebarTop: '#5062a0',
         sidebarBottom: '#384886',
-        customOrange: '#ff7556'
+        customOrange: '#ff7556',
+        customGray: '#eff3fc'
       }
     },
   },

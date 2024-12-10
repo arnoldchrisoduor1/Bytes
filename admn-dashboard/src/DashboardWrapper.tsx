@@ -3,9 +3,9 @@ import Sidebar from "./components/Sidebar";
 
 const Dashboardlayout = ({ children } : { children: React.ReactNode }) => {
   return (
-    <div className={`flex w-full min-h-screen`}>
+    <div className={`flex w-full`}>
         <Sidebar/>
-        <main className={`flex flex-col w-full h-full py-7 px-9 bg-gray-50`}>
+        <main className={`flex flex-col w-full h-full py-7 px-9`}>
             <Navbar />
             {children}
         </main>
