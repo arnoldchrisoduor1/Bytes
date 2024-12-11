@@ -8,6 +8,9 @@ import { Banknote } from "lucide-react";
 import DashboardKPITab from "../components/DashboardKPITab";
 import DashboardAreaChart from "../components/DashboardAreaChart";
 import DashboardRight from "../components/DashboardRight";
+import DashboardUpcomingCard from "../components/DashboardUpcomingCard";
+import DashboardTable from "../components/DashboardTable";
+import { tableData } from "../constants/tableData";
 
 const Dashboard = () => {
   // const [timeRange, setTimeRange] = useState('Month');
@@ -88,12 +91,42 @@ const Dashboard = () => {
           </div>
           <DashboardAreaChart />
         </div>
+
+        <div className="bg-white mt-10 px-4 rounded-md">
+          <div className="flex flex-row justify-between py-6">
+            <div>
+              <h1 className="font-bold text-gray-500">Last Order</h1>
+            </div>
+
+            <div>
+            <select
+              // value={timeRange}
+              // onChange={(e) => handleFilterChange(e.target.value)}
+              style={{
+                padding: "4px",
+                borderRadius: "4px",
+                border: "1px solid #ccc",
+                outline: "none",
+              }}
+            >
+              <option value="Day">Day</option>
+              <option value="Week">Week</option>
+              <option value="Month">Month</option>
+            </select>
+            </div>
+          </div>
+          <DashboardTable data={tableData} />
+        </div>
         </div>
 
         {/* The third half */}
         <div className="flex-2 basis-1/4">
           <div className="ml-8 mt-4">
                 <DashboardRight />
+          </div>
+
+          <div className="ml-8 mt-4">
+            <DashboardUpcomingCard />
           </div>
         </div>
     </div>

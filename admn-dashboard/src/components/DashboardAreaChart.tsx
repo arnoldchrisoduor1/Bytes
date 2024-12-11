@@ -13,7 +13,7 @@ const DashboardAreaChart = () => {
     <div>
          <AreaChart
           width={1030}
-          height={250}
+          height={290}
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
