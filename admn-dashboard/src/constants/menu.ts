@@ -13,7 +13,7 @@ export const menuItems = [
     menu: "Management",
     items: [
       { name: "Products", icon: ShoppingCart, link: "/products" },
-      { name: "Customer", icon: Users, link: "/customer" },
+      { name: "Customers", icon: Users, link: "/customer" },
       { name: "Warehouse", icon: Warehouse, link: "/warehouse" },
       { name: "Reports", icon: ClipboardMinus, link: "/reports" },
     ],
@@ -21,8 +21,8 @@ export const menuItems = [
   {
     menu: "Notification",
     items: [
-      { name: "Transaction", icon: ArrowRightLeft, link: "/transaction" },
-      { name: "Message", icon: Mail, link: "/message" },
+      { name: "Transactions", icon: ArrowRightLeft, link: "/transaction" },
+      { name: "Messages", icon: Mail, link: "/message" },
     ],
   },
 ];
