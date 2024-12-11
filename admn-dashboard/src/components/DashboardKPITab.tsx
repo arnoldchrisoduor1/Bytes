@@ -2,21 +2,35 @@ import { twMerge } from "tailwind-merge";
 import { LucideProps } from "lucide-react";
 
 interface DashboardKPITabProps {
-    Icon: React.ComponentType<LucideProps>;
-    header: string;
-    description: string;
-    kpiSymbol?: string;
-    price: number;
-    priceLabel?: string;
-    customClass?: string;
-    priceClass?: string;
+  Icon: React.ComponentType<LucideProps>;
+  header: string;
+  description: string;
+  kpiSymbol?: string;
+  price: number;
+  priceLabel?: string;
+  customClass?: string;
+  priceClass?: string;
 }
 
-const DashboardKPITab: React.FC<DashboardKPITabProps> = ({ Icon, header, description, kpiSymbol, price, priceLabel, customClass, priceClass}) => {
+const DashboardKPITab: React.FC<DashboardKPITabProps> = ({
+  Icon,
+  header,
+  description,
+  kpiSymbol,
+  price,
+  priceLabel,
+  customClass,
+  priceClass,
+}) => {
   return (
-    <div className="inline-block bg-white p-4 rounded-md">
-        <div className="flex flex-col">
-        <div className={twMerge(`bg-customOrange p-2 rounded-full m-auto mt-2`, customClass)}>
+    <div className="bg-white p-4 rounded-md w-full">
+      <div className="flex flex-col">
+        <div
+          className={twMerge(
+            `bg-customOrange p-2 rounded-full m-auto mt-2`,
+            customClass
+          )}
+        >
           <Icon color="white" />
         </div>
         <div className="text-center">
@@ -24,9 +38,13 @@ const DashboardKPITab: React.FC<DashboardKPITabProps> = ({ Icon, header, descrip
           <p className="text-xs mt-1 text-gray-400">{description}</p>
         </div>
         <div className="mt-3 text-center">
-          <p className={twMerge(`font-bold text-xl`, priceClass)}>{kpiSymbol}{price}{priceLabel}</p>
+          <p className={twMerge(`font-extrabold text-xl`, priceClass)}>
+            {kpiSymbol}
+            {price}
+            {priceLabel}
+          </p>
         </div>
-        </div>
+      </div>
     </div>
   );
 };
