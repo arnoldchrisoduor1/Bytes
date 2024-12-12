@@ -17,12 +17,12 @@ const Sidebar = () => {
       className={`
       bg-gradient-to-b from-sidebarTop to-sidebarBottom 
       h-screen 
-      fixed 
-      left-0 
-      top-0 
+      fixed
+      left-0
+      top-0
       transition-all 
-      duration-300 
-      ${isSidebarOpen ? "w-[200px]" : "w-20"}
+      duration-300
+      ${isSidebarOpen ? "w-20 md:w-[200px]" : "-ml-20 md:ml-0 md:w-20"}
       overflow-hidden
     `}
     >
@@ -46,7 +46,7 @@ const Sidebar = () => {
             <img src={logo} alt="logo icon" className="h-10 w-10 rounded-md" />
           </div>
           {isSidebarOpen && (
-            <p className="text-white font-semibold">
+            <p className="text-white font-semibold hidden md:block">
               By<span className="text-customOrange">tes</span>
             </p>
           )}
@@ -87,13 +87,13 @@ const Sidebar = () => {
           />
         </div>
         {isSidebarOpen && (
-          <div className="tracking-tighter">
+          <div className="tracking-tighter hidden md:block">
             <h4 className="font-semibold">Arnold O</h4>
             <p className="text-sm">Manager</p>
           </div>
         )}
         {isSidebarOpen && (
-          <div className="hover:cursor-pointer">
+          <div className="hover:cursor-pointer hidden md:block">
             <ChevronDown />
           </div>
         )}

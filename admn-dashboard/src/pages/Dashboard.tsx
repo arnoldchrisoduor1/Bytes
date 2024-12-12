@@ -18,9 +18,9 @@ const Dashboard = () => {
   // const [filteredData, setFilteredData] = useState(data);
 
   return (
-    <div className="flex flex-row w-full">
+    <div className="flex flex-col md:flex-col lg:flex-row w-full">
       <div className="flex-1 basis-3/4">
-        <div className="flex flex-row gap-10 mt-4">
+        <div className="flex flex-wrap md:flex-row gap-10 mt-4">
           <DashboardKPITab
             Icon={ChartNoAxesCombined}
             header="Total Sales"
@@ -93,7 +93,7 @@ const Dashboard = () => {
           <DashboardAreaChart />
         </div>
 
-        <div className="bg-white mt-10 px-4 rounded-md">
+        <div className="bg-white mt-10 px-4 rounded-md m-auto overflow-x-auto md:w-full">
           <div className="flex flex-row justify-between py-6">
             <div>
               <h1 className="font-bold text-gray-500">Last Order</h1>
@@ -123,7 +123,7 @@ const Dashboard = () => {
         {/* The third half */}
 
         {/* VIRTUAL CARD COMPONENT */}
-        <div className="flex-2 basis-1/4">
+        <div className="flex-2 basis-1/4 mt-10 md:mt-0">
           <div className="ml-8 mt-4">
                 <DashboardRight />
           </div>

@@ -3,6 +3,7 @@ import {
   Line,
   LineChart,
   Tooltip,
+  ResponsiveContainer
 } from "recharts";
 
 const DashboardExpensesStatus = () => {
@@ -18,10 +19,11 @@ const DashboardExpensesStatus = () => {
         </div>
       </div>
 
-      <div>
+      <div className="w-full h-64">
+        <ResponsiveContainer>
         <LineChart
-          width={240}
-          height={250}
+          // width={240}
+          // height={250}
           data={data}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
@@ -33,6 +35,7 @@ const DashboardExpensesStatus = () => {
           <Line type="monotone" dataKey="pv" stroke="#ff7556" />
           {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
         </LineChart>
+        </ResponsiveContainer>
       </div>
     </div>
   );

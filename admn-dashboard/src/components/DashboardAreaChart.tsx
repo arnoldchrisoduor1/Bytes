@@ -1,19 +1,19 @@
 import {
-    Area,
-    AreaChart,
-    CartesianGrid,
-    Tooltip,
-    XAxis,
-    YAxis,
-  } from "recharts";
-  import { data } from "../constants/data";
+  Area,
+  AreaChart,
+  CartesianGrid,
+  Tooltip,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+} from "recharts";
+import { data } from "../constants/data";
 
 const DashboardAreaChart = () => {
   return (
-    <div>
-         <AreaChart
-          width={1030}
-          height={290}
+    <div className="w-full h-72">
+      <ResponsiveContainer>
+        <AreaChart
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
@@ -35,8 +35,9 @@ const DashboardAreaChart = () => {
             fill="url(#colorPv)"
           />
         </AreaChart>
+      </ResponsiveContainer>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardAreaChart
+export default DashboardAreaChart;

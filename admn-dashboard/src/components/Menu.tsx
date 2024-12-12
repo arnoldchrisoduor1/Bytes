@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
     <div>
       {menuItems.map((section, index) => (
         <div key={index} className="mt-10">
-          <h3 className={`${isSidebarOpen ? 'block' : 'hidden'}`}>{section.menu}</h3>
+          <h3 className={`${isSidebarOpen ? 'hidden md:block' : 'hidden'}`}>{section.menu}</h3>
           <ul>
             {section.items.map((item, itemIndex) => (
               <li
@@ -45,8 +45,8 @@ const Menu: React.FC = () => {
                   }}
                 >
                   <div className={`flex flex-row gap-2 text-sm ${isSidebarOpen ? '' : ''}`}>
-                    <item.icon className={`h-4  ${isSidebarOpen ? '' : 'm-auto'}`} />
-                    <div className={` ${isSidebarOpen ? 'block' : 'hidden'}`}>
+                    <item.icon className={`h-4 m-auto  ${isSidebarOpen ? 'md:m-0' : 'm-auto'}`} />
+                    <div className={` ${isSidebarOpen ? 'hidden md:block' : 'hidden'}`}>
                       {item.name}
                     </div>
                   </div>

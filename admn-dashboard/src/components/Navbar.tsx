@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <section>
-      <nav>
+      <nav className="">
         <div className="flex flex-row justify-between gap-6 items-center">
           <div className="flex flex-row gap-3">
             {/* Toggle Button */}
@@ -35,27 +35,27 @@ const Navbar = () => {
               {isSidebarOpen ? <ChevronLeft /> : <ChevronRight />}
             </button>
           </div>
-            <div className="flex flex-row p-2 w-[500px] bg-customGray rounded-md px-4">
+            <div className="flex flex-row p-2 lg:w-[500px] bg-customGray rounded-md px-4">
               <input
                 type="text"
                 alt="searchbar"
-                placeholder="Search for 'cup cakes'"
-                className="w-[500px] bg-transparent outline-none border-none"
+                placeholder="'cakes'"
+                className="w-[100px] md:w-[250px] lg:w-[500px] bg-transparent outline-none border-none"
               />
               <Search className="flex-end" color="gray" />
             </div>
           </div>
 
           <div className="flex flex-row gap-3">
-            <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
+            <div className="hidden md:block bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
               <Moon color="gray" />
             </div>
 
-            <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
-              <Bell color="gray" />
+            <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300 flex justify-center items-center h-10">
+              <Bell color="gray" className=""/>
             </div>
 
-            <div className=" flex flex-row bg-customGray py-2 px-4 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
+            <div className=" flex flex-row bg-customGray h-10 py-2 px-4 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
               <ChevronRight color="tomato" />
               <p className="font-bold text-sidebarBottom">Log Out</p>
             </div>

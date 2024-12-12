@@ -23,7 +23,7 @@ const DashboardKPITab: React.FC<DashboardKPITabProps> = ({
   priceClass,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-md w-full">
+    <div className="bg-white p-4 rounded-md w-[150px] m-auto">
       <div className="flex flex-col">
         <div
           className={twMerge(
