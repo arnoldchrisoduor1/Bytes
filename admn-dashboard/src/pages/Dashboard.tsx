@@ -11,6 +11,7 @@ import DashboardRight from "../components/DashboardRight";
 import DashboardUpcomingCard from "../components/DashboardUpcomingCard";
 import DashboardTable from "../components/DashboardTable";
 import { tableData } from "../constants/tableData";
+import DashboardExpensesStatus from "../components/DashboardExpensesStatus";
 
 const Dashboard = () => {
   // const [timeRange, setTimeRange] = useState('Month');
@@ -19,7 +20,7 @@ const Dashboard = () => {
   return (
     <div className="flex flex-row w-full">
       <div className="flex-1 basis-3/4">
-        <div className="flex flex-row gap-10">
+        <div className="flex flex-row gap-10 mt-4">
           <DashboardKPITab
             Icon={ChartNoAxesCombined}
             header="Total Sales"
@@ -73,7 +74,7 @@ const Dashboard = () => {
 
         <div className="bg-white p-5 rounded-md mt-10">
           <div className="flex flex-row justify-between item-center mb-3">
-            <h3 className="font-bold ml-10">Summary Sales</h3>
+            <h3 className="font-bold ml-10 text-sidebarBottom">Summary Sales</h3>
             <select
               // value={timeRange}
               // onChange={(e) => handleFilterChange(e.target.value)}
@@ -84,9 +85,9 @@ const Dashboard = () => {
                 outline: "none",
               }}
             >
-              <option value="Day">Day</option>
-              <option value="Week">Week</option>
               <option value="Month">Month</option>
+              <option value="Week">Week</option>
+              <option value="Day">Day</option>
             </select>
           </div>
           <DashboardAreaChart />
@@ -120,13 +121,21 @@ const Dashboard = () => {
         </div>
 
         {/* The third half */}
+
+        {/* VIRTUAL CARD COMPONENT */}
         <div className="flex-2 basis-1/4">
           <div className="ml-8 mt-4">
                 <DashboardRight />
           </div>
 
-          <div className="ml-8 mt-4">
+              {/* UPCOMING PAYMENTS CARD */}
+          <div className="ml-8 mt-8">
             <DashboardUpcomingCard />
+          </div>
+
+          {/* EXPENSES STATUS COMPONENT. */}
+          <div className="mt-11 ml-8">
+            <DashboardExpensesStatus />
           </div>
         </div>
     </div>

@@ -40,9 +40,11 @@ const DashboardRight = () => {
         <InfoCard icon={MoveDown} color="red" label="Taxes" amount="$ -199.0" />
       </div>
 
-      <div className="mt-8 flex flex-row gap-2 text-customOrange bg-white w-[70%] m-auto p-2 rounded-lg">
-        <p className="font-bold">Add Virtual Card</p>
-        <ArrowBigRight />
+      <div className="flex mt-8 gap-2 text-customOrange bg-white w-[99%] mx-auto p-2 rounded-lg justify-center">
+        <div className="flex flex-row">
+          <p className="font-bold">Add Virtual Card</p>
+          <ArrowBigRight />
+        </div>
       </div>
     </div>
   );

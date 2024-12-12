@@ -1,39 +1,64 @@
-import { Search } from "lucide-react";
+import { ChevronLeft, Search } from "lucide-react";
 import { Moon } from "lucide-react";
 import { Bell } from "lucide-react";
 import { ChevronRight } from "lucide-react";
+import { useSelector, useDispatch } from "react-redux";
+import { AppDispatch, RootState } from "../redux/store";
+import { useCallback } from "react";
+import { setSidebarOpenState } from "../redux/slices/sidebarOpenSlice";
 
 const Navbar = () => {
+  const dispatch: AppDispatch = useDispatch();
+
+  const isSidebarOpen = useSelector(
+    (state: RootState) => state.sidebar.sidebarOpen
+  );
+
+  const handleSidebarToggle = useCallback(() => {
+    dispatch(setSidebarOpenState(!isSidebarOpen));
+  }, [dispatch, isSidebarOpen]);
+
   return (
     <section>
       <nav>
         <div className="flex flex-row justify-between gap-6 items-center">
+          <div className="flex flex-row gap-3">
+            {/* Toggle Button */}
           <div>
-          <div className="flex flex-row p-2 w-[500px] bg-customGray rounded-md px-4">
-            <input
-              type="text"
-              alt="searchbar"
-              placeholder="Search for 'cup cakes'"
-              className="w-[500px] bg-transparent outline-none border-none"
-            />
-            <Search className="flex-end" color="gray" />
+            <button
+              onClick={() => handleSidebarToggle()}
+              className="
+              bg-customOrange/90 
+              text-white 
+              rounded-full 
+              p-2 hover:bg-customOrange">
+              {isSidebarOpen ? <ChevronLeft /> : <ChevronRight />}
+            </button>
           </div>
+            <div className="flex flex-row p-2 w-[500px] bg-customGray rounded-md px-4">
+              <input
+                type="text"
+                alt="searchbar"
+                placeholder="Search for 'cup cakes'"
+                className="w-[500px] bg-transparent outline-none border-none"
+              />
+              <Search className="flex-end" color="gray" />
+            </div>
           </div>
 
           <div className="flex flex-row gap-3">
+            <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
+              <Moon color="gray" />
+            </div>
 
-          <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
-            <Moon color="gray" />
-          </div>
+            <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
+              <Bell color="gray" />
+            </div>
 
-          <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
-            <Bell color="gray" />
-          </div>
-
-          <div className=" flex flex-row bg-customGray py-2 px-4 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
-            <ChevronRight color="tomato" />
-            <p className="font-semibold text-black/70">Log Out</p>
-          </div>
+            <div className=" flex flex-row bg-customGray py-2 px-4 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
+              <ChevronRight color="tomato" />
+              <p className="font-bold text-sidebarBottom">Log Out</p>
+            </div>
           </div>
         </div>
       </nav>

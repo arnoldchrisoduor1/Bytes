@@ -6,9 +6,14 @@ import { useCallback } from "react";
 
 const Menu: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
+
   const activeMenuItem = useSelector(
     (state: RootState) => state.menu.activeMenuItem
   );
+
+  const isSidebarOpen = useSelector (
+    (state: RootState) => state.sidebar.sidebarOpen
+  )
 
   const handleMenuItemClick = useCallback(
     (link: string) => {
@@ -21,7 +26,7 @@ const Menu: React.FC = () => {
     <div>
       {menuItems.map((section, index) => (
         <div key={index} className="mt-10">
-          <h3>{section.menu}</h3>
+          <h3 className={`${isSidebarOpen ? 'block' : 'hidden'}`}>{section.menu}</h3>
           <ul>
             {section.items.map((item, itemIndex) => (
               <li
@@ -39,9 +44,11 @@ const Menu: React.FC = () => {
                     handleMenuItemClick(item.link);
                   }}
                 >
-                  <div className="flex flex-row gap-2 text-sm">
-                    <item.icon className="h-4" />
-                    {item.name}
+                  <div className={`flex flex-row gap-2 text-sm ${isSidebarOpen ? '' : ''}`}>
+                    <item.icon className={`h-4  ${isSidebarOpen ? '' : 'm-auto'}`} />
+                    <div className={` ${isSidebarOpen ? 'block' : 'hidden'}`}>
+                      {item.name}
+                    </div>
                   </div>
                 </a>
               </li>
