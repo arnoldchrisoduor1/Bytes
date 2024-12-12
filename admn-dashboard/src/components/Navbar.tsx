@@ -57,7 +57,7 @@ const Navbar = () => {
 
             <div className=" flex flex-row bg-customGray h-10 py-2 px-4 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300">
               <ChevronRight color="tomato" />
-              <p className="font-bold text-sidebarBottom">Log Out</p>
+              <p className="font-bold text-sidebarBottom hidden md:block">Log Out</p>
             </div>
           </div>
         </div>
