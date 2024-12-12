@@ -51,7 +51,7 @@ const Navbar = () => {
               <Moon color="gray" />
             </div>
 
-            <div className="bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300 flex justify-center items-center h-10">
+            <div className="hidden md:block bg-customGray p-2 rounded-md hover:cursor-pointer hover:bg-white transition transition-duration-300 h-10">
               <Bell color="gray" className=""/>
             </div>
 
