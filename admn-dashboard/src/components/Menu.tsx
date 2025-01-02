@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setActiveMenuItem } from "../redux/slices/menuSlice";
 import { AppDispatch, RootState } from "../redux/store";
 import { useCallback } from "react";
+import { Link } from "react-router-dom";
 
 const Menu: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -11,9 +12,9 @@ const Menu: React.FC = () => {
     (state: RootState) => state.menu.activeMenuItem
   );
 
-  const isSidebarOpen = useSelector (
+  const isSidebarOpen = useSelector(
     (state: RootState) => state.sidebar.sidebarOpen
-  )
+  );
 
   const handleMenuItemClick = useCallback(
     (link: string) => {
@@ -26,7 +27,9 @@ const Menu: React.FC = () => {
     <div>
       {menuItems.map((section, index) => (
         <div key={index} className="mt-10">
-          <h3 className={`${isSidebarOpen ? 'hidden md:block' : 'hidden'}`}>{section.menu}</h3>
+          <h3 className={`${isSidebarOpen ? 'hidden md:block' : 'hidden'}`}>
+            {section.menu}
+          </h3>
           <ul>
             {section.items.map((item, itemIndex) => (
               <li
@@ -37,12 +40,10 @@ const Menu: React.FC = () => {
                     : "text-white/70"
                 }`}
               >
-                <a
-                  href={item.link}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMenuItemClick(item.link);
-                  }}
+                {/* Use only Link for navigation */}
+                <Link
+                  to={item.link}
+                  onClick={() => handleMenuItemClick(item.link)}
                 >
                   <div className={`flex flex-row gap-2 text-sm ${isSidebarOpen ? '' : ''}`}>
                     <item.icon className={`h-4 m-auto  ${isSidebarOpen ? 'md:m-0' : 'm-auto'}`} />
@@ -50,7 +51,7 @@ const Menu: React.FC = () => {
                       {item.name}
                     </div>
                   </div>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

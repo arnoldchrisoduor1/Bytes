@@ -22,7 +22,7 @@ export const menuItems = [
     menu: "Notification",
     items: [
       { name: "Transactions", icon: ArrowRightLeft, link: "/transaction" },
-      { name: "Messages", icon: Mail, link: "/message" },
+      { name: "Messages", icon: Mail, link: "/messages" },
     ],
   },
 ];

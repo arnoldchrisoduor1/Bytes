@@ -21,13 +21,13 @@ const Navbar = () => {
   return (
     <section>
       <nav className="">
-        <div className="flex flex-row justify-between gap-6 items-center">
+        <div className="flex flex-row justify-between gap-2 items-center">
           <div className="flex flex-row gap-3">
             {/* Toggle Button */}
           <div>
             <button
               onClick={() => handleSidebarToggle()}
-              className="
+              className="zz
               bg-customOrange/90 
               text-white 
               rounded-full 
