@@ -1,12 +1,12 @@
-import MessageSidebar from '../components/MessageSidebar';
-import MessageContainer from '../components/MessageContainer';
+import MessageSidebar from '../components/Messages/MessageSidebar';
+import MessageContainer from '../components/Messages/MessageContainer';
 
 const Messages = () => {
   return (
-    <div className='flex w-full gap-8'>
+    <div className='flex w-full h-screen gap-8 mt-8 overflow-hidden'>
 
       {/* Message Container */}
-      <div className='flex-1 basis-3/4'>
+      <div className='flex-1 basis-3/4 border-r-2'>
         <MessageContainer />
       </div>
 

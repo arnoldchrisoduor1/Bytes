@@ -7,7 +7,7 @@ import {
   YAxis,
   ResponsiveContainer,
 } from "recharts";
-import { data } from "../constants/data";
+import { data } from "../../constants/data";
 
 const DashboardAreaChart = () => {
   return (

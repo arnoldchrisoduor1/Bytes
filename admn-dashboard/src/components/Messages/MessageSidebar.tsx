@@ -1,4 +1,4 @@
-import { conversationData } from '../constants/ConversationData';
+import { conversationData } from '../../constants/ConversationData';
 import MessageConversation from './MessageConversation'
 
 const MessageSidebar= () => {

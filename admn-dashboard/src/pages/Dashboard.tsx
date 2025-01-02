@@ -5,13 +5,13 @@ import { ShoppingCart } from "lucide-react";
 import { Banknote } from "lucide-react";
 // import { useState } from "react";
 
-import DashboardKPITab from "../components/DashboardKPITab";
-import DashboardAreaChart from "../components/DashboardAreaChart";
-import DashboardRight from "../components/DashboardRight";
-import DashboardUpcomingCard from "../components/DashboardUpcomingCard";
-import DashboardTable from "../components/DashboardTable";
+import DashboardKPITab from "../components/Dashboard/DashboardKPITab";
+import DashboardAreaChart from "../components/Dashboard/DashboardAreaChart";
+import DashboardRight from "../components/Dashboard/DashboardRight";
+import DashboardUpcomingCard from "../components/Dashboard/DashboardUpcomingCard";
+import DashboardTable from "../components/Dashboard/DashboardTable";
 import { tableData } from "../constants/tableData";
-import DashboardExpensesStatus from "../components/DashboardExpensesStatus";
+import DashboardExpensesStatus from "../components/Dashboard/DashboardExpensesStatus";
 
 const Dashboard = () => {
   // const [timeRange, setTimeRange] = useState('Month');
