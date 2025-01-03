@@ -3,10 +3,10 @@ import MessageContainer from '../components/Messages/MessageContainer';
 
 const Messages = () => {
   return (
-    <div className='flex w-full h-screen gap-8 mt-8 overflow-hidden'>
+    <div className='flex w-full h-full gap-8 mt-5'>
 
       {/* Message Container */}
-      <div className='flex-1 basis-3/4 border-r-2'>
+      <div className='flex-1 basis-3/4 border-r-2 h-full'>
         <MessageContainer />
       </div>
 

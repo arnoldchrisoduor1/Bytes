@@ -1,13 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import menuReducer from "./slices/menuSlice";
 import sidebarOpenReducer from './slices/sidebarOpenSlice';
+import selectedMessageReducer from './slices/selectedMessageSlice';
+import setActiveMessageIdReducer  from "./slices/messageContainerIdSlice";
+
 
 const store = configureStore({
     reducer: {
         menu: menuReducer,
         sidebar: sidebarOpenReducer,
+        conversation: selectedMessageReducer,
+        activeMessage: setActiveMessageIdReducer
+        
     },
-    // Add this to help with debugging
+    // to help with debugging
     devTools: true,
 });
 

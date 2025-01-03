@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [dispatch, isSidebarOpen]);
 
   return (
-    <section>
+    <section className="">
       <nav className="">
         <div className="flex flex-row justify-between gap-2 items-center">
           <div className="flex flex-row gap-3">
