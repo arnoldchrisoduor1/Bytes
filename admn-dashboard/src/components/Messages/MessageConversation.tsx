@@ -11,7 +11,7 @@ const MessageConversation:React.FC<MessageConversationProps> = ({ name, message 
             <img src="https://avatar.iran.liara.run/public" className="h-7 w-7 rounded-full" alt="avatar image" />
         </div>
 
-        <div className="overflow-hidden w-[320px]">
+        <div className="overflow-hidden w-[200px]">
             <div className="overflow-hidden whitespace-nowrap text-ellipsis w-full font-semibold text-sidebarBottom">{name}</div>
             <div className="overflow-hidden whitespace-nowrap text-ellipsis w-full text-sm text-sidebarBottom">{message}</div>
         </div>

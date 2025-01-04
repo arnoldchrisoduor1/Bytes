@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 interface MessageItemProps {
   content: string;
-  sender: string;
+  sender?: string;
   fromMe: boolean;
   chatClassName: string;
   bubbleColor: string;

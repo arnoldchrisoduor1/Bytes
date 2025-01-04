@@ -19,7 +19,7 @@ export const menuItems = [
     ],
   },
   {
-    menu: "Notification",
+    menu: "Notifications",
     items: [
       { name: "Transactions", icon: ArrowRightLeft, link: "/transaction" },
       { name: "Messages", icon: Mail, link: "/messages" },
