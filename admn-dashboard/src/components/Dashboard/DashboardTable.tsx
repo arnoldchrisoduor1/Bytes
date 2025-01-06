@@ -13,7 +13,7 @@ interface TableProps {
 const DashboardTable: React.FC<TableProps> = ({ data }) => {
   return (
     <table className="w-full border-collapse rounded-md overflow-hidden">
-      <thead>
+      <thead className="">
         <tr className="bg-sidebarBottom text-white/60">
           <th className="text-left px-4 py-2">Customer</th>
           <th className="text-left px-4 py-2">Date</th>

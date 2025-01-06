@@ -8,7 +8,7 @@ interface TableRowProps {
 
 const TableRow: React.FC<TableRowProps> = ({ customer, date, price, product, imageUrl }) => {
   return (
-    <tr>
+    <tr className="">
         <td className="text-left px-4 py-2">
             <div className="flex flex-row items-center gap-2">
                 <img src={imageUrl} alt={customer} className="h-7 w-7 rounded-full" />

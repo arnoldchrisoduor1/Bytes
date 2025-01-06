@@ -3,7 +3,7 @@ import { TreetableData } from "../../constants/ProductTreetableData";
 
 
 const COLORS = [
-  "#8889DD",
+  "#5062a0",
   "#9597E4",
   "#8DC77B",
   "#A5D297",
@@ -54,8 +54,10 @@ const CustomizedContent = (props: any) => {
 
 export default function ProductTreetableChart() {
   return (
+    <div className="w-full h-72 m-auto">
+
     <Treemap
-      width={400}
+      width={350}
       height={300}
       data={TreetableData}
       dataKey="size"
@@ -65,5 +67,6 @@ export default function ProductTreetableChart() {
     >
       <Tooltip />
     </Treemap>
+    </div>
   );
 }

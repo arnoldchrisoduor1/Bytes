@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { PieChart, Pie, Sector } from "recharts";
+import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 import { PieData } from "../../constants/ProductsPieChartData";
 
 
@@ -86,6 +86,8 @@ export default function ProductsPieChart() {
   );
 
   return (
+    <div className="w-80 h-72 m-auto">
+
     <PieChart width={400} height={250}>
       <Pie
         activeIndex={activeIndex}
@@ -95,10 +97,11 @@ export default function ProductsPieChart() {
         cy={120}
         innerRadius={60}
         outerRadius={80}
-        fill="#8884d8"
+        fill="#5062a0"
         dataKey="value"
         onMouseEnter={onPieEnter}
       />
     </PieChart>
+    </div>
   );
 }

@@ -18,7 +18,8 @@ module.exports = {
         customGray: '#eff3fc',
         customBlue: '#3ba0ea',
         customGreen: '#2aad93',
-        customYellow: '#feb558'
+        customYellow: '#feb558',
+        customPurple: '#8884d8',
       }
     },
   },
